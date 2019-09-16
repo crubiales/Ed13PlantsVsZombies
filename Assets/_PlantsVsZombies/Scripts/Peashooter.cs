@@ -12,6 +12,12 @@ public class Peashooter : MonoBehaviour
     public bool isShooting;
 
 
+    // prefacb que esta en proyecto y se llama pea ,
+    // esta variable la voy a usar para instanciar en el juego el Pea
+    public GameObject prefabPea;
+
+    public Transform shootPosition;
+
     public Animator myAnimator;
   void Start()
   {
@@ -51,6 +57,13 @@ public class Peashooter : MonoBehaviour
   public void Shoot()
   {
         Debug.Log("Disparando");
+
+        GameObject createdPea = Instantiate(prefabPea);
+
+        createdPea.transform.position = shootPosition.position;
+
+
+
 
         currentCDTime = 0;
         isShooting = false;
