@@ -23,8 +23,7 @@ public class Pea : MonoBehaviour
     if (isTouching == false)
     {
       /// Nos vemos hacia la derecha
-      transform.Translate(new Vector3(
-        speed * Time.deltaTime, 0, 0));
+      transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
     }
   }
 
