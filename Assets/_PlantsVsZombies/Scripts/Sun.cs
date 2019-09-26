@@ -12,6 +12,8 @@ public class Sun : MonoBehaviour
 
     public bool isTaken;
 
+    public int sunValue = 10;
+
    
     private void Start()
     {
@@ -31,6 +33,7 @@ public class Sun : MonoBehaviour
         if (isTaken == false)
         {
             isTaken = true;
+            GameManager.Instance.AddSun(sunValue);
             myAnimator.SetTrigger("Taken");
             
         }

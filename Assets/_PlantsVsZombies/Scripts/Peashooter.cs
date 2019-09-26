@@ -19,9 +19,15 @@ public class Peashooter : MonoBehaviour
     public Transform shootPosition;
 
     public Animator myAnimator;
+    //referencia a audioSource
+    public AudioSource audioSource;
+
+    public List<AudioClip> audioList;
   void Start()
   {
-
+        audioSource = this.GetComponent<AudioSource>();
+        audioSource.loop = false;
+        
         currentCDTime = 0;
         isShooting = false;
   }
@@ -62,11 +68,20 @@ public class Peashooter : MonoBehaviour
 
         createdPea.transform.position = shootPosition.position;
 
-
+        PlaySound();
 
 
         currentCDTime = 0;
         isShooting = false;
         
   }
+
+    public void PlaySound()
+    {
+        //Saca un valor aleatorio entre 0 y el numero de objetos en la lista 
+        int index = Random.Range(0, audioList.Count);
+
+        audioSource.clip = audioList[index];
+        audioSource.Play();
+    }
 }

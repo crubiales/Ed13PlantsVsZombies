@@ -16,15 +16,29 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    public AudioClip music;
+
+    public int sunsCount;
     void Start()
-    {        
+    {
+
+        GameUi.Instance.UpdateSuns(sunsCount);
+        SoundManager.Instance.StartPlay(music);
     }
 
     void Update()
-    {        
+    {   
+        
     }
 
     public void AddSun(int sun)
     {
+        sunsCount = sunsCount + sun;
+        //Actualizar interfaz
+        GameUi.Instance.UpdateSuns(sunsCount);
+
+
+
+
     }
 }

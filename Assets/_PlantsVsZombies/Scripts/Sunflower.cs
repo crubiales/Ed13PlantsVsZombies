@@ -50,7 +50,8 @@ public class Sunflower : MonoBehaviour
   public void GenerateSun()
   {
 
-        GameObject createdPea = Instantiate(prefabSun);
+        GameObject createdSun = Instantiate(prefabSun);
+        createdSun.transform.position = this.transform.position;
 
         currentCDTime = 0;
         isGenerating = false;
