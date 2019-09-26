@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -26,19 +27,16 @@ public class GameManager : Singleton<GameManager>
         SoundManager.Instance.StartPlay(music);
     }
 
-    void Update()
-    {   
-        
-    }
-
     public void AddSun(int sun)
     {
         sunsCount = sunsCount + sun;
         //Actualizar interfaz
         GameUi.Instance.UpdateSuns(sunsCount);
 
+    }
 
-
-
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }

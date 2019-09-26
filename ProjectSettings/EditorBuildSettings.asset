@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/_PlantsVsZombies/Scenes/Prototype01-Canvas.unity
-    guid: fdbbb9a03d0d9b541a85974596f7fc4e
+    path: Assets/_PlantsVsZombies/Scenes/Revisited/MainMenu_formador.unity
+    guid: c295abf692503c94295eef3ae129cbe9
+  - enabled: 1
+    path: Assets/_PlantsVsZombies/Scenes/Revisited/level1.unity
+    guid: a9221b7f6926ee1429ccd82be6709e82
+  - enabled: 1
+    path: Assets/_PlantsVsZombies/Scenes/Revisited/GameOver.unity
+    guid: 516d10b45a23a0445823c6ab91abc869
   m_configObjects: {}
